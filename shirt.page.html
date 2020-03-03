@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>shirt</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <div *ngFor = "let size of tshirt"> <!-- let เป็นการประกาศตัวแปร -->
+    <label>{{size}}</label>
+  </div>
+  <br>
+  <ion-button (click)="get_size()">GET size</ion-button>
+  <br>
+  <ion-input [(ngModel)] = "input"></ion-input>
+  <br>
+  <ion-button (click)="add_size()">ADD size</ion-button>
+  <br>
+  <ion-button (click)="update_size()">UPDATE size</ion-button>
+  <br>
+  <ion-button (click)="remove_size()">REMOVE size</ion-button>
+
+
+</ion-content>
