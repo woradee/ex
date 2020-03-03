@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>2 มิติ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor ="let item of item_two_d">
+    <div><h1>ข้อมูลผู้ซื้อ</h1></div>
+  <ion-input placeholder="รหัสมาชิก" [(ngModel)] = "cus_id"></ion-input>
+  <ion-input placeholder="ที่อยู่จัดส่ง" [(ngModel)] = "tran_address"></ion-input>
+  <ion-label>จำนวนสินค้า: {{total_num}}</ion-label><br>
+  <ion-label>ราคารวม: {{total_price}}</ion-label><br>
+  <ion-button color="danger" (click)="gotoCartDetail()">ดูตะกร้าสินค้า</ion-button>
+
+
+    <h1>ชื่อสินค้า : {{item.name}}</h1>
+    <br>
+    <div>รหัส : {{item.id}}</div>
+    <br>
+    <div>ราคา : {{item.price}}</div>
+    <br>
+    <div>จำนวน : {{item.num}}</div>
+     <br>
+    <div>ผู้จัดจำหน่าย : รหัสผู้จัดจำหน่าย :{{item.vender.vid}} ชื่อผู้จัดจำหน่าย :{{item.vender.vname}} เรท :{{item.vender.vrate}}</div>
+    <br>
+    <ion-button color="success" (click)="add_card(item.id,item.name,item.price,'1')"> เลือกสินค้า </ion-button>
+    <div>-------------------------------------------------------------------</div>
+  </div>
+
+  
+  <ion-button (click)="get_item()">GET ITEM</ion-button>
+  <br><br>
+  <ion-button (click)="add_item()">add ITEM</ion-button>
+  <br><br>
+  <ion-button (click)="update_item()">update ITEM</ion-button>
+  <br><br>
+  <ion-button (click)="remove_item()">remove ITEM</ion-button>
+</ion-content>
