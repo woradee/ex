@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      array 1 มิติ
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor = "let item of items_one_d"> <!-- let เป็นการประกาศตัวแปร -->
+    <label>{{item}}</label>
+  </div>
+  <br>
+  <ion-button (click)="get_item()">GET ITEM</ion-button>
+  <br>
+  <ion-input [(ngModel)] = "box1"></ion-input>
+  <br>
+  <ion-button (click)="add_item()">ADD ITEM</ion-button>
+  <br>
+  <ion-button (click)="update_item()">UPDATE ITEM</ion-button>
+  <br>
+  <ion-button (click)="remove_item()">REMOVE ITEM</ion-button>
+</ion-content>
