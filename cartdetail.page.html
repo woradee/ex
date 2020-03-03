@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cart_detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="item_storage" *ngFor="let data of cart">
+    <h1>ชื่อ : {{data.name}}</h1>
+    <p>รหัสสินค้า : {{data.id}}</p>
+    <p>ราคา : {{data.price}}</p>
+    
+  </div>
+ 
+  <ion-label  >ราคาสุทธิ :{{total_price}}</ion-label>
+</ion-content>
